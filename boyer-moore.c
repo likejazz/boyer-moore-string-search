@@ -192,9 +192,10 @@ void test(uint8_t *string, uint8_t *pat) {
     printf("\n");
 #endif
     if (pos == 0)
-        printf("Not Found - %d chars compared.\n", chars_compared);
+        printf("Not Found - ");
     else 
-        printf("Found at position %u - %d chars compared.\n", pos, chars_compared);
+        printf("Found at position %u - ", pos);
+    printf("%d chars compared.\n", chars_compared);
 }
 
 int main(int argc, char const *argv[]) {
