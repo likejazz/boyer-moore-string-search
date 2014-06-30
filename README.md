@@ -1,7 +1,7 @@
 boyer-moore-string-search
 =========================
 
-[Boyer-Moore string search algorithm] implementation in C
+[Boyer-Moore string search algorithm](http://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string_search_algorithm) implementation in C
 
 ## Usage
 
