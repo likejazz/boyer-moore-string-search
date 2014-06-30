@@ -13,7 +13,7 @@
 int chars_compared;
 
 // delta1 table: delta1[c] contains the distance between the last
-// character of pat and the rightmost occurence of c in pat.
+// character of pat and the rightmost occurrence of c in pat.
 // If c does not occur in pat, then delta1[c] = patlen.
 // If c is at string[i] and c != pat[patlen-1], we can
 // safely shift i over by delta1[c], which is the minimum distance
