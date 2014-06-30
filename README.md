@@ -1,7 +1,12 @@
 boyer-moore-string-search
 =========================
 
+# Introduction
 Boyer Moore string search implementation in C
-#### Test
+# Testing
     $ make
     $ ./bm
+
+To remove the executables.
+
+    $ make clean
