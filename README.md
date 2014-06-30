@@ -20,7 +20,7 @@ This table contains an entry for each character in the pattern. The entry for pa
 
 ## Usage
 
-To compile and execute the unit tests:
+To compile and execute the tests:
 
     $ make
     $ ./bm
