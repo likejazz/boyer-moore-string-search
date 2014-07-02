@@ -191,7 +191,7 @@ void test(uint8_t *string, uint8_t *pat) {
 #ifdef DEBUG
     printf("\n");
 #endif
-    if (pos == 0)
+    if (pos == 0 && chars_compared != strlen(pat))
         printf("Not Found - ");
     else 
         printf("Found at position %u - ", pos);
@@ -205,6 +205,7 @@ int main(int argc, char const *argv[]) {
     test("...........................", "ABYXCDEYX");
     test("..cbcabcabc", "bcabcabc");
     test("..adbdadbda", "adbda");
+    test("test is good", "test");
 
     return 0;
 }
