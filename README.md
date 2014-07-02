@@ -31,4 +31,4 @@ To remove the compiled file:
 
 ## Sample Output
 
-![Sample Output](https://raw.githubusercontent.com/likejazz/boyer-moore-string-search/master/sample_output.png)
+![Sample Output](https://raw.githubusercontent.com/likejazz/boyer-moore-string-search/master/sample-output.png)
