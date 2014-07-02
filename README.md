@@ -20,7 +20,7 @@ This table contains an entry for each character in the pattern. The entry for pa
 
 ## Usage
 
-To compile and execute the unit tests:
+To compile and execute the tests:
 
     $ make
     $ ./bm
@@ -31,4 +31,4 @@ To remove the compiled file:
 
 ## Sample Output
 
-![Sample Output](https://raw.githubusercontent.com/likejazz/boyer-moore-string-search/master/sample_output.png)!
+![Sample Output](https://raw.githubusercontent.com/likejazz/boyer-moore-string-search/master/sample_output.png)
