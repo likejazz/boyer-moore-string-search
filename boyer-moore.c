@@ -17,7 +17,7 @@ int chars_compared;
 // If c does not occur in pat, then delta1[c] = patlen.
 // If c is at string[i] and c != pat[patlen-1], we can
 // safely shift i over by delta1[c], which is the minimum distance
-// needed to shift pat forward to get string[i] lined up 
+// needed to shift pat forward to get string[i] lined up
 // with some character in pat.
 // this algorithm runs in alphabet_len+patlen time.
 void make_delta1(int *delta1, uint8_t *pat, int32_t patlen) {
@@ -45,18 +45,18 @@ void make_delta1(int *delta1, uint8_t *pat, int32_t patlen) {
             delta1_chars[max_chars] = pat[i];
             max_chars++;
         }
-#endif        
+#endif
     }
 #ifdef DEBUG
     int t;
     printf ("\n");
-    for (t=0; t < max_chars; t++) 
+    for (t=0; t < max_chars; t++)
         printf("delta1[%c] = %d\n", delta1_chars[t], delta1[delta1_chars[t]]);
     printf("delta1[other] = %d\n", NOT_FOUND);
 #endif
 }
 
-// true if the suffix of word starting from word[pos] is a prefix 
+// true if the suffix of word starting from word[pos] is a prefix
 // of word
 int is_prefix(uint8_t *word, int wordlen, int pos) {
     int i;
@@ -80,7 +80,7 @@ int suffix_length(uint8_t *word, int wordlen, int pos) {
     return i;
 }
 
-// delta2 table: given a mismatch at pat[pos], we want to align 
+// delta2 table: given a mismatch at pat[pos], we want to align
 // with the next possible full match could be based on what we
 // know about pat[pos+1] to pat[patlen-1].
 //
@@ -90,17 +90,17 @@ int suffix_length(uint8_t *word, int wordlen, int pos) {
 // If, within the substring pat[pos+1 .. patlen-1], lies a prefix
 // of pat, the next plausible match is here (if there are multiple
 // prefixes in the substring, pick the longest). Otherwise, the
-// next plausible match starts past the character aligned with 
+// next plausible match starts past the character aligned with
 // pat[patlen-1].
-// 
+//
 // In case 2:
 // pat[pos+1] to pat[patlen-1] does occur elsewhere in pat. The
 // mismatch tells us that we are not looking at the end of a match.
 // We may, however, be looking at the middle of a match.
-// 
+//
 // The first loop, which takes care of case 1, is analogous to
 // the KMP table, adapted for a 'backwards' scan order with the
-// additional restriction that the substrings it considers as 
+// additional restriction that the substrings it considers as
 // potential prefixes are all suffixes. In the worst case scenario
 // pat consists of the same letter repeated, so every suffix is
 // a prefix. This loop alone is not sufficient, however:
@@ -141,7 +141,7 @@ void make_delta2(int *delta2, uint8_t *pat, int32_t patlen) {
     for (t=0; t < patlen; t++) {
         printf("delta2[%c]: %d\n", pat[t], delta2[t]);
     }
-#endif    
+#endif
 }
 
 uint32_t boyer_moore (uint8_t *string, uint32_t stringlen, uint8_t *pat, uint32_t patlen) {
@@ -193,7 +193,7 @@ void test(uint8_t *string, uint8_t *pat) {
 #endif
     if (pos == 0 && chars_compared != strlen(pat))
         printf("Not Found - ");
-    else 
+    else
         printf("Found at position %u - ", pos);
     printf("%d chars compared.\n", chars_compared);
 }
