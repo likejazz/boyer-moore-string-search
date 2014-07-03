@@ -3,7 +3,7 @@ boyer-moore-string-search
 
 [Boyer-Moore string search algorithm](http://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string_search_algorithm) implementation in C.
 
-The algorithm performs its matching backwards, from right to left and proceeds by iteratively matching, shifting the pattern, matching, shifting, etc. The shift amount is calculated by applying these two rules: 
+The algorithm performs its matching backwards, from right to left and proceeds by iteratively matching, shifting the pattern, matching, shifting, etc. The shift amount is calculated by applying these two rules:
 
 1. the bad character rule
 2. good suffix rule
