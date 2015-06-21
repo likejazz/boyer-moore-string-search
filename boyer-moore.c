@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdbool.h>
 
-#define ALPHABET_LEN 255
+#define ALPHABET_LEN 256
 #define NOT_FOUND patlen
 #define max(a, b) ((a < b) ? b : a)
 
